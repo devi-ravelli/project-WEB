@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <title>Transavia verhalen app</title>
+        <link rel="stylesheet" href="css/flex.css">
+        <link rel="stylesheet" href="css/style-filter.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    	<header>
+            <ul>
+                <a href="#">Hallo Devi</a>
+                <a href="#openModal">Uitloggen</a>
+                <a href="flex.html" ><img class="logo" alt="logo" src="img/icon175x175.png"></a>
+    	   </ul>
+           <section id="openModal" class="modalDialog">
+                <img src="img/Transavia_3.jpg" id="bg" alt="">
+                    <form id="modal" method="get" action="flex.html">
+                        <h1>
+                        Welkom!
+                        </h1>
+                         <fieldset>
+                            <legend>inloggen</legend>
+                            <label for="boekingsNummer">Boekingsnummer</label>
+                            <input type="text" id="boekingsNummer" placeholder="BRN123" required>
+                            <label for="achternaam">Achternaam</label>
+                            <input type="text" id="achternaam" placeholder="Simon" required>
+                            <button type="submit">Inloggen</button>
+                            <p class="gast" id="button">
+                                <a href="flex.html">of bezoeken als gast</a>
+                            </p>
+                        </fieldset>
+                    </form>
+            </section>
+        </header>
+        <figure>
+            <section class="banner">
+            </section>
+        </figure>
+        
+        <nav>
+            <form>
+                <input type="text" placeholder="zoek op trefwoord"/>
+                <input type="submit" name="submit" value="Zoeken" />
+            </form>
+        </nav>
+        
+        <aside>
+            <h1>Populaire Verhalen</h1>
+                <article>
+                    <header>
+                        <h2>&gt; Stijloefeningen (92) – Vergezocht</h2>
+                    </header>
+                    <p>Het was in de omstreken van een gure februaridag rond het middaguur. </p>
+                    <footer>
+                        <p>32 Like's, <a href="#">16 reactie's</a></p>
+                    </footer>
+                </article>
+
+                <article>
+                    <header>
+                        <h2>&gt; Stijloefeningen (76) – Gesponsord</h2>
+                    </header>
+                        <p>Het regent pijpenstelen van het merk Dunhill en het waait flink als ik de bus van de GVB uitstapt. </p>
+                    <footer>
+                        <p>30 Like's, <a href="#">17 reactie's</a></p>
+                    </footer>
+                </article>
+
+                <article>
+                    <header>
+                        <h2>&gt; Stijloefeningen (71) – Vrijdag de 13e</h2>
+                    </header>
+                    <p>Bij het uitstappen van de bus waait mijn jas open, precies op het moment dat de buschauffeur de deuren sluit. </p>
+                    <footer>
+                        <p>25 Like's, <a href="#">12 reactie's</a></p>
+                    </footer>
+                </article>
+        </aside>
+        
+        <main>
+            <header class="filter">
+                <h1>Wat wil je lezen?</h1>
+                <p><b>laat je gemoedstoestand helpen een verhaal te vinden.</b>
+                    <select>
+                        <option selected disabled>Kies jouw gemoedstoestand</option>
+                        <option value="">Vrolijk</option>
+                        <option value="">Nieuwschierig</option>
+                    </select>
+                </p>
+                <p><b>maximaal aantal woorden</b></p>
+                <input class="slider" type="range" min="100" max="2000" value="1000" id="woorden">
+                    <p>Woorden: <span id="aantal"></span></p>
+            </header>
+            
+            <article>
+                <header>
+                    <h1><a href="verhaal1.html">&gt; Telegrafisch</a></h1>
+                </header>
+                <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP</p>
+                <footer>
+                    <img class="fav" src="img/star-blue.png" alt="favoriet">
+                    <button class="later">Nu lezen</button>
+                    <p><span>6 Like's, geplaatst 16-9-16,</span> <a href="#">2 reactie's</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h1><a href="verhaal2.html">&gt; Boers</a></h1>
+                </header>
+                <p>Ik stap dus op ut stationsplein in dieën groâte stad uut dieën bus, met mien zoân in zijne keierwoâguh. Mien zoân sloâpt.</p>
+                <footer>
+                    <img class="fav" src="img/star.png" alt="favoriet">
+                    <button class="later">Nu lezen</button>
+                    <p>8 Like's, geplaatst 15-9-16, <a href="#">3 reactie's</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h1><a href="verhaal3.html">&gt; De verwarde man</a></h1>
+                </header>
+                    <p> De politie heeft dinsdag 2 februari een verwarde man aangehouden. Hij was op dat moment in een babywinkel op het Bos en Lommerplein bezig babyschoentjes te kopen.</p>
+                    <footer>
+                    <img class="fav" src="img/star.png" alt="favoriet">
+                    <button class="later">Nu lezen</button>
+                        <p>12 Like's, geplaatst 13-9-16, <a href="#">6 reactie's</a></p>
+                    </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h1>&gt; Beroemd</h1>
+                </header>
+                <p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten.</p>
+                <footer>
+                <img class="fav" src="img/star.png" alt="favoriet">
+                    <button class="later">Nu lezen</button>
+                    <p>16 Like's, geplaatst 10-9-16, <a href="#">7 reactie's</a></p>
+                </footer>
+            </article>
+            
+            <article id="load">
+                <header>
+                    <h1>&gt; voorbeeld</h1>
+                </header>
+                <p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten.</p>
+                <footer>
+                <img class="fav" src="img/star.png" alt="favoriet">
+                    <button class="later">Nu lezen</button>
+                    <p>16 Like's, geplaatst 10-9-16, <a href="#">7 reactie's</a></p>
+                </footer>
+            </article>
+
+            <article id="load">
+                <header>
+                    <h1>&gt; voorbeeld</h1>
+                </header>
+                <p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten.</p>
+                <footer>
+                <img class="fav" src="img/star-blue.png" alt="favoriet">
+                    <button class="later">Nu lezen</button>
+                    <p>16 Like's, geplaatst 10-9-16, <a href="#">7 reactie's</a></p>
+                </footer>
+            </article>
+            
+            
+            
+            <section class="load">
+                <button id="loadMore" onclick="loading()">
+                    Meer verhalen laden
+                </button>
+            </section>         
+        </main>
+        
+        <aside id="favorieten">
+            <h1>Favorieten</h1>
+                <article>
+                    <header>
+                        <h2 id="favorieten">&gt; Stijloefeningen (92) – Vergezocht</h2>
+                    </header>
+                    <p>Het was in de omstreken van een gure februaridag rond het middaguur. </p>
+                    <footer>
+                        <p>32 Like's, <a href="#">16 reactie's</a></p>
+                    </footer>
+                </article>
+        </aside>
+        
+        <footer>
+            <img src="img/transavia-2.svg" alt="logo">
+        </footer>
+        
+        <script>
+            var slider = document.getElementById("woorden");
+            var output = document.getElementById("aantal");
+                output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+            
+            function loading() {
+                var element = document.getElementsByClassName("load");
+                element.classList.add("loader");
+                element.classList.remove("load");
+            }
+        </script>
+    </body>
+</html>

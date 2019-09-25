@@ -1,0 +1,471 @@
+/* flex */
+body {
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: "trebuchet ms",sans-serif;
+	flex-flow: center;
+    flex-direction: row-reverse;
+}
+header {
+	width: 100%;
+	background-color: white;
+	color: #00d66c;
+}
+nav {
+	padding: 0.4em;
+	width: 100%;
+}
+main {
+	width: 100%;
+    order: 2;
+}
+aside {
+	width: 100%;
+	min-height: 5em;
+    order: 1;
+}
+
+/* header */
+body>header {
+	box-shadow: 0em 0.2em 1em rgba(0, 0, 0, 0.8);
+	height: 3.4em;
+}
+header>ul>a {
+	text-decoration: none;
+	padding: 0.3em;
+	color: #00d66c;
+	font-size: 1.1em;
+}
+header>ul>a:hover {
+    text-decoration: underline;
+}
+.logo {
+	width: 2.7em;
+	height: 2.7em;
+	right: 0;
+	top: 0;
+	padding: 0.2em;
+	position: absolute;
+}
+.banner {
+    background-image: url('http://i.huffpost.com/gen/4066966/images/o-TOURIST-GREECE-TABLET-facebook.jpg');
+    position: absolute;
+    opacity: 0.6;
+    top: 3.3em;
+    left: 0;
+    width: 100%;
+    height: 10em;
+    background-size: cover;
+    z-index: -1;
+    background-position: center center;
+}
+
+
+/* searchbox */
+nav {
+	margin-top: -2em;
+}
+form {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	height: 2.6em;
+	top: 0;
+	border-radius: 1em;
+	background-color: white;
+	overflow: hidden;
+}
+input {
+	font-size: 1em;
+	color: #ff3268;
+	background: transparent;
+}
+input[type=text] {
+	width: 98%;
+	text-align: left;
+	padding: 0.5em 0.5em;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+}
+input[name=submit] {
+	position: absolute;
+	padding: 0.6em 0.5em;
+	top: 0;
+	right: 0;
+	font-size: 1em;
+	color: white;
+	text-align: center;
+	border-width: 0;
+	background-color:#ff3268;
+	cursor: pointer;
+}
+input[name=submit]:hover {
+    background-color: rgba(255, 122, 158, 1);
+}
+
+/* navigatie */
+main>ul {
+	display:flex;
+    flex-direction: row;
+	padding: 1.2em;
+	margin-top: 7.4em;
+}
+main>ul>li>a {
+	color: rgba(0, 0, 0, 1);
+	padding-right: 1em;
+}
+li {
+	width: 100%;
+	text-align: center;
+	list-style: none;
+}
+
+/* slider */
+.slider {
+    width: 50%;
+    height: 2em;
+    background: #fff;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    cursor: pointer;
+    float: right;
+    padding-right: 10em;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+
+/* main */
+main {
+    margin-top: 2em;
+    padding: 0.5em;
+}
+header>h1 {
+    font-weight: 900;
+}
+header.filter {
+    background-color: #ff3268;
+    border-radius: .5rem .5rem 0 0;
+    padding: 0.2rem 0.4rem;
+}
+header.filter>h1 {
+    color: white;
+}
+header.filter>p {
+    color: white;
+}
+select {
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 1em;
+}
+article {
+    min-height: 10.9em;
+    margin: 0.75em;
+	padding: 0.4em;
+    border: 0.1em solid black;
+    border-radius: 1.2em;
+}
+article>p {
+	padding-left: 0.8em;
+}
+h1>a:visited {
+	text-decoration: none;
+	color: #2800a0;
+}
+h1>a:link {
+	text-decoration: none;
+	color: #00d66c;
+}
+button.later {
+	float: right;
+	width: 8em;
+	font-size: 1em;
+	padding: -1em;
+	line-height: 0;
+}
+article>footer {
+}
+.fav {
+	padding-left: 0.5em;
+	float: right;
+	max-height: 2em;
+}
+
+/* Aside */
+aside {
+	display: none;
+	margin-top: 11em;
+}
+aside>h1 {
+	color: white;
+	background-color: rgba(0,214,108,.9);
+	border-radius: .5rem;
+	padding: 2rem 1.5rem;
+	max-width: 8rem;
+    margin-bottom: 0;
+}
+aside#favorieten>h1 {
+	color: white;
+	background-color: #2800a0;
+}
+aside>h1 {
+}
+h2#favorieten {
+	color: #2800a0;
+}
+
+/*overlay inlog scherm
+inspiratie:
+http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
+*/
+form#modal {
+    max-width: 25em;
+}
+.modalDialog {
+	position: fixed;
+	box-sizing: border-box;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.99);
+	z-index: 99999;
+	opacity:0;
+	transition: opacity 400ms ease-out;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > section {
+	max-width: 22em;
+	position: relative;
+	margin: 10% auto;
+	padding: 0.4em 0.3em 0.4em 0.3em;
+	border-radius: 1em;
+	background: #fff;
+}
+
+#bg {
+	position: fixed; 
+	opacity: 0.5;
+	top: 0; 
+	left: 0; 
+	min-width: 100%;
+ 	min-height: 100%;
+}
+/* aanmeldformulier */
+
+legend {
+	float: left;
+	width: 100%;
+	font-size: 1.3em;
+	padding: 0 1em 1em 0;
+	display: inline-block;
+	display: none;
+}
+section {
+	text-align: center;
+}
+form {
+	border-style: none;
+	height: auto;
+    margin-top: 5em;
+}
+fieldset {
+	border-style: none;
+	transition: all .2s;
+}
+fieldset>label {
+	float: left;
+	color: #000;
+	font-weight: bold;
+}
+fieldset>input {
+    width: 100%;
+    padding: 0.5em 0.5em;
+    margin: 0.5em 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+}
+fieldset>input:invalid {
+	border-color: red;
+	border-width: 0.1em;
+	}
+fieldset>input:valid {
+  	border-color:green;
+  	border-width: 0.1em;
+} 
+button {
+    background-color: #ff3268;
+    color: white;
+    padding: 1em 1.2em;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 2em;
+    font-size: 1em;
+    transition:all .2s;
+}
+button:hover {
+    background-color: rgba(255, 122, 158, 1);
+}
+
+
+body>footer {
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	padding: 1em;
+  	background-color: #f3e5d8;
+  	text-align: center;
+}
+footer {
+	width: 100%;
+    order: 4;
+}
+/*verhalen*/
+article.telegrafisch {
+	text-align: center;
+}
+
+section>a, a:visited {
+    text-decoration: none;
+    display: block;
+    margin: 1em 0;
+}
+section>a:hover {
+    text-decoration: none;
+}
+#loadMore {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background-color: #2800a0;
+    color: #fff;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    border-radius: 1em;
+    transition: all 600ms ease-in-out;
+}
+#loadMore:hover {
+    background-color: #ff3268;
+    color: #fff;
+}
+
+aside#favorieten {
+    order: 3;
+}
+
+/* Micro */
+#load {
+    display: none;
+}
+#loader {
+    display: inline;
+}
+.loader {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #ddd;
+}
+.loader:before{
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 4px;
+  background-color: #2980b9;
+  animation: loading 2.5s linear infinite;
+}
+
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}
+
+/* breakpoint */
+@media only screen and (min-width : 40em) {
+	main {
+		max-width: 42em;
+	}
+    input[type=text] {
+	   width: 98%;
+	   text-align: center;
+    }
+    select {
+        padding: 0.5em;
+        float: right;
+        width: auto;
+    }
+	aside {
+        margin-top: 5.7em;
+        display: none;
+		max-width: 25%;
+		margin-top: 1.2em;
+		align-items: baseline;
+		padding-left: 1em;
+	}	
+
+	main>ul {
+		max-width: 42em;
+		background-color: #fff;
+	}
+	select {
+		min-width: 10em;
+	}
+	main>ul>li>a {
+		color: #999988;
+	}
+	li {
+		width: 75%;
+		text-align: left;
+		list-style: none;
+	}
+
+}
+
+@media only screen and (min-width : 60em) {
+	body {
+		justify-content: center;
+	}
+	nav>form {
+		width: 75%;
+	}
+	main>ul>li {
+		display: inline;
+	}
+	aside {
+        margin-top: 5.7em;
+		display: flex;
+		flex-direction: column;
+	}
+    aside#favorieten {
+        display: none;
+        margin-top: 7.5em;
+    }
+}
+
+@media only screen and (min-width : 92em) {
+    aside#favorieten {
+        display: flex;
+        order: 3;
+    }
+}
